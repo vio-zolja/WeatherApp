@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="index.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <input id="input" type="text" placeholder="Search city" />
+            <input id="search" type="submit" value="Search" />
+            <input id="current" type="button" value="Current" />
+            <div id="time"></div>
+        </form>
+
+        <header>
+            <h1>
+                The weather in <span class="city">Augsburg</span> is
+                <span class="temperature">12 </span><span class="unit"> degrees</span>
+            </h1>
+
+            <p>
+                Show in <span class="celsius">C</span> |
+                <span class="farenheit">F</span>
+            </p>
+        </header>
+        <hr />
+
+        <h5>Forecast</h5>
+
+        <ul>
+            <li class="tomorrow">Tomorrow <span class="tempTmr">8</span></li>
+            <li class="secondDay">
+                02nd February <spaan class="tempsecond">5</spaan>
+            </li>
+            <li class="thirdDay">03rd February <span class="tempthird">4</span></li>
+            <li class="fourthDay">
+                04th February <span class="tempfourth">7</span>
+            </li>
+        </ul>
+
+        <script src="index.js"></script>
+    </div>
+</body>
+
+</html>
