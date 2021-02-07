@@ -109,4 +109,6 @@ function search (event) {
     
 }
 
-form.addEventListener("submit", search);}
+form.addEventListener("submit", search);
+}
+
