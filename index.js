@@ -73,6 +73,15 @@ function displayCurrent(response) {
 
   place.innerHTML = response.data.name;
   temperature.innerHTML = Math.round(response.data.main.temp);
+
+  let feelsLike = document.querySelector(".feelsLike");
+  let wind = document.querySelector (".wind");
+  let humidity = document.querySelector(".humidity");
+
+  feelsLike.innerHTML = Math.round(response.data.main.feels_like);
+  wind.innerHTML = Math.round(response.data.wind.speed);
+  humidity.innerHTML = response.data.main.humidity
+
 }
 // search
 
@@ -97,6 +106,14 @@ function search (event) {
   
   temperature.innerHTML = Math.round(response.data.main.temp);
   city.innerHTML = response.data.name
+
+  let feelsLike = document.querySelector(".feelsLike");
+  let wind = document.querySelector (".wind");
+  let humidity = document.querySelector(".humidity");
+
+  feelsLike.innerHTML = Math.round(response.data.main.feels_like);
+  wind.innerHTML = Math.round(response.data.wind.speed);
+  humidity.innerHTML = response.data.main.humidity
 }
   
   axios.get(apiURL).then(searchData);

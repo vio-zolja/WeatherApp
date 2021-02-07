@@ -93,7 +93,9 @@ p{
 #description{
   list-style-type:none;
   text-align: right;
+  position:relative;
   margin-right:3%;
+  margin-top: -60px;
 
 }
 
