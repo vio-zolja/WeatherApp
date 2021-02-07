@@ -61,8 +61,8 @@ function displayCurrent(response) {
   let humidity = document.querySelector(".humidity");
 
   feelsLike.innerHTML = `${Math.round(response.data.main.feels_like)} °C`;
-  wind.innerHTML = Math.round(response.data.wind.speed);
-  humidity.innerHTML = response.data.main.humidity
+  wind.innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
+  humidity.innerHTML = `${response.data.main.humidity} %`;
 
 }
 // search
@@ -93,9 +93,9 @@ function search (event) {
   let wind = document.querySelector (".wind");
   let humidity = document.querySelector(".humidity");
 
-  feelsLike.innerHTML = Math.round(response.data.main.feels_like);
-  wind.innerHTML = Math.round(response.data.wind.speed);
-  humidity.innerHTML = response.data.main.humidity
+ feelsLike.innerHTML = `${Math.round(response.data.main.feels_like)} °C`;
+  wind.innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
+  humidity.innerHTML = `${response.data.main.humidity} %`;
 }
   
   axios.get(apiURL).then(searchData);
