@@ -90,6 +90,13 @@ p{
   background: rgba(49, 13, 49, 0.822);
 }
 
+#description{
+  list-style-type:none;
+  text-align: right;
+  margin-right:3%;
+
+}
+
 
 .city{
   text-decoration: strong;
