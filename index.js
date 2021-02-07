@@ -27,25 +27,7 @@ time.innerHTML = `${day} ${month}, ${hour}:${minutes}`;
 
 // units
 
-function unitC(event) {
-  event.preventDefault();
-  let c = document.querySelector(".unit");
-  c.innerHTML = `°C`;
-}
-
-let celsius = document.querySelector(".celsius");
-celsius.addEventListener("click", unitC);
-
-function unitF(event) {
-  event.preventDefault();
-  let c = document.querySelector(".temperature");
-  let f = document.querySelector(".unit");
-  c.innerHTML = (5 / 9) * (farenheit - 32);
-  f.innerHTML = `°F`;
-}
-
-let farenheit = document.querySelector(".farenheit");
-farenheit.addEventListener("click", unitF);
+  
 
 // current
 
@@ -78,7 +60,7 @@ function displayCurrent(response) {
   let wind = document.querySelector (".wind");
   let humidity = document.querySelector(".humidity");
 
-  feelsLike.innerHTML = Math.round(response.data.main.feels_like);
+  feelsLike.innerHTML = `${Math.round(response.data.main.feels_like)} °C`;
   wind.innerHTML = Math.round(response.data.wind.speed);
   humidity.innerHTML = response.data.main.humidity
 
