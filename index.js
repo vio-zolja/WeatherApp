@@ -27,6 +27,13 @@ time.innerHTML = `${day} ${month}, ${hour}:${minutes}`;
 
 // units
 
+function displayCelsius(event){
+  event.preventDefault();
+  let unit = decument.querySelector(".unit");
+  unit.innerHTML = "°C";
+
+let c = document.querySelector(".c");
+c.addEventListener("click", displayCelsius)
   
 
 // current
@@ -102,6 +109,4 @@ function search (event) {
     
 }
 
-form.addEventListener("submit", search);
-
-
+form.addEventListener("submit", search);}
