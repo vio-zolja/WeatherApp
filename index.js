@@ -39,7 +39,7 @@ c.addEventListener("click", displayCelsius)
 // current
 
 let button1 = document.querySelector("#current");
-button1.addEventListener("click", currentTemp);
+
 
 function currentTemp(event) {
   event.preventDefault();
@@ -72,6 +72,7 @@ function displayCurrent(response) {
   humidity.innerHTML = `${response.data.main.humidity} %`;
 
 }
+button1.addEventListener("click", currentTemp);
 // search
 
 let form = document.querySelector("form");
